@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "security-headers-audit"
+version = "0.1.0"
+description = "Grade HTTP security headers A-F from a URL or header dump: HSTS, CSP, cookies, CORS, disclosure"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+dependencies = []
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[project.scripts]
+security-headers-audit = "security_headers_audit.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
